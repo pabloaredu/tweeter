@@ -17,9 +17,18 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  margin: 140px auto;
+  width: 450px;
+  background-color: #ffffff;
+}

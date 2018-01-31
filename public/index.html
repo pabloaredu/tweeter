@@ -7,11 +7,27 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- New tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet Container CSS -->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- External Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -21,12 +37,38 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container ">
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form action='/tweets' method='POST'>
+              <textarea class="writing-tweet" name="text" placeholder="What are you humming about?"></textarea>
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+        </section>
+        <section id="tweet" class="tweets">
+          <article>
+            <header>
+              <img src = "https://avatars1.githubusercontent.com/u/1749548?v=4&s=64" />
+              <h2>User name</h2>
+              <p>@username</p>
+            </header>
+            <p id="tweet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              Aenean commodo ligula eget dolor. Aenean massa.</p>
+            <footer>
+              <p>X days ago</p>
+              <img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />
+              <img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />
+              <img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />
+            </footer>
+          </article>
+        </section>
+
     </main>
 
   </body>
