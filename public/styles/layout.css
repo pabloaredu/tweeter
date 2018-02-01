@@ -19,8 +19,10 @@ body {
   color: #244751;
   background-color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 0
+  padding: 0 2em;
 }
+
+
 
 
 /*
@@ -30,5 +32,5 @@ body {
 .container {
   margin: 140px auto;
   width: 450px;
-  background-color: #ffffff;
+  background-color: #fff;
 }

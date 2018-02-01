@@ -1,5 +1,5 @@
 
-#tweet {
+.tweet {
     /* border: 2px solid #d3d3d3; */
     border-bottom: 1px solid #d3d3d3;
     border-left: 1px solid #d3d3d3;
@@ -9,34 +9,34 @@
     opacity: 0.7;
 }
 
-#tweet:hover {
+.tweet:hover {
     opacity: 1;
     border: 1px solid grey;
 }
 
-#tweet #tweet-content {
+.tweet #tweet-content {
     padding: 5px;
     height: 80px;
 }
 
 
 
-#tweet footer {
+.tweet footer {
     border-top: 1px solid #d3d3d3;
     font-size: 0.8em;
     padding: 10px;
 }
 
-#tweet footer img {
+.tweet footer img {
     float:right;
     display: none;
 }
 
-#tweet footer p {
+.tweet footer p {
     display: inline;
 }
 
-#tweet header {
+.tweet header {
     background-color:#E8E8EE;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -44,12 +44,12 @@
     padding: 10px;
 }
 
-#tweet header h2 {
+.tweet header h2 {
     display: inline;
     vertical-align: top;
 }
 
-#tweet header p {
+.tweet header p {
     float: right;
 }
 
