@@ -8,7 +8,7 @@ function renderTweets(tweets) {
   $('#tweets').empty();
   tweets.forEach(element => {
     var $tweet = createTweetElement(element);
-    $('#tweets').append($tweet)
+    $('#tweets').prepend($tweet)
   });
 }
 
@@ -19,7 +19,7 @@ var $header = $('<header>');
 var $avatar = $(`<img src ="${data.user.avatars.small}" />`);
 var $userName = $(`<h2>${data.user.name}</h2>`);
 var $tweetUserName = $(`<p>${data.user.handle}</p>`);
-var $content = $(`<p>${data.content.text}</p>`); //New Tweet Content
+var $content = $('<p>').text(data.content.text);
 // Footer elements
 var $footer = $('<footer>');
 var $date = $(`<p>${data.content.created_at}</p>`); // Add the time when tweet was created
@@ -74,6 +74,7 @@ $('#tweetform').submit(function(event){
       data: $('form').serialize(),
       success: function(event){
         console.log("Ajax call was successful");
+        loadTweets();
       },
       error: function(err){
         console.log("There was an error calling the api ");
