@@ -57,7 +57,7 @@ function loadTweets () {
 
 // When document ready:
 $(function() {
-  // Creating a new tweet /// QUESTION TO REMEMBER: WHY DOES THIS FUNCTION HAS TO BE ON DOCUMENT READY??
+  // Creating a new tweet
 $('#tweetform').submit(function(event){
   event.preventDefault();
   var newTweetText = $('#newTweet').val();
@@ -83,6 +83,16 @@ $('#tweetform').submit(function(event){
     });
   }
 });
+
+$('#new-tweet textarea').focus();
+
+$( "button" ).click(function(event) {
+  $( "#new-tweet" ).slideToggle( "down" );
+  $('#new-tweet textarea').focus();
+});
+
+
+
   loadTweets(); //Testing GET response: DELETE LATER
 });
 
