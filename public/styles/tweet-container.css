@@ -1,6 +1,5 @@
 
 .tweet {
-    /* border: 2px solid #d3d3d3; */
     border-bottom: 1px solid #d3d3d3;
     border-left: 1px solid #d3d3d3;
     border-right: 1px solid #d3d3d3;
@@ -14,9 +13,14 @@
     border: 1px solid grey;
 }
 
-.tweet #tweet-content {
+.tweet:hover  .tweetFooterImage {
+    display: block;
+}
+
+.tweet .tweetContent {
     padding: 5px;
-    height: 80px;
+    height: 60px;
+    word-wrap: break-word;
 }
 
 

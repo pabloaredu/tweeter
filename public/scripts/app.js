@@ -19,13 +19,13 @@ var $header = $('<header>');
 var $avatar = $(`<img src ="${data.user.avatars.small}" />`);
 var $userName = $(`<h2>${data.user.name}</h2>`);
 var $tweetUserName = $(`<p>${data.user.handle}</p>`);
-var $content = $('<p>').text(data.content.text);
+var $content = $('<p>').text(data.content.text).addClass('tweetContent');
 // Footer elements
 var $footer = $('<footer>');
 var $date = $(`<p>${data.content.created_at}</p>`); // Add the time when tweet was created
-var $replyIcon = $('<img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />');
-var $flagIcon = $('<img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />');
-var $likeIcon = $('<img src = "https://www.theregister.co.uk/Design/graphics/icons/reply_icon.png" />')
+var $replyIcon = $('<img src = "https://www.podomatic.com/assets/homebase/share-btn-01addbf9c0a7df9c7d3a7b6286da5e587d3c1e5854148746fb03df003d4190f6.png" />').addClass('tweetFooterImage');
+var $flagIcon = $('<img src = "https://forums.forzamotorsport.net/Themes/Forza/icon_topic_latestunread.png" />').addClass('tweetFooterImage');
+var $likeIcon = $('<img src = "https://sl3-cdn.karousell.com/components/heart.svg" />').addClass('tweetFooterImage');
 
 // Building structure of elements in DOM
 $header.append($avatar);
@@ -60,13 +60,14 @@ $(function() {
   // Creating a new tweet
 $('#tweetform').submit(function(event){
   event.preventDefault();
+  var $errorSection = $('#new-tweet .error-section').empty();
   var newTweetText = $('#newTweet').val();
   if (newTweetText === "" || newTweetText === null) {
     var $messageEmptyTweet = $('<p>Your tweet is empty. Let the world knows what you are thinking!</p>');
-    $('#new-tweet').prepend($messageEmptyTweet);
+    $errorSection.prepend($messageEmptyTweet);
   } else if (newTweetText.length > 140) {
     var $messageBiggerTweet = $('<p>You only have 140 characters. Please try again.</p>');
-    $('#new-tweet').prepend($messageBiggerTweet);
+    $errorSection.prepend($messageBiggerTweet);
   } else {
     $.ajax({
       url: '/tweets',
