@@ -1,7 +1,6 @@
 
 .nav-bar {
     background-color: #00a087;
-    /* color: #e8fdff; */
     left: 0;
     top: 0;
     width: 100%;
@@ -23,7 +22,6 @@
     font-size: 2em;
     top: 50%;
     color: #fff;
-    /* line-height: 50%; */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
